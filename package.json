@@ -1,18 +1,23 @@
 {
   "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  },
   "scripts": {
     "start": "webpack-dev-server --progress --colors",
     "build": "webpack --progress --colors"
   },
   "dependencies": {
-    "@rc-ex/authorize-uri": "^0.5.1",
-    "@rc-ex/core": "^0.5.1",
+    "@rc-ex/authorize-uri": "^0.5.2",
+    "@rc-ex/core": "^0.5.2",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-subx": "^0.8.2",
+    "subx": "^0.9.14"
   },
   "devDependencies": {
     "@types/node": "^14.6.0",
-    "@types/react": "^16.9.47",
+    "@types/react": "^16.9.48",
     "@types/react-dom": "^16.9.8",
     "dotenv-override-true": "^6.2.1",
     "eslint-plugin-react": "^7.20.6",
