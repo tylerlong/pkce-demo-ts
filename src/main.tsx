@@ -23,7 +23,7 @@ class Main extends Component<PropsStore> {
 class Token extends Component<PropsStore> {
   render() {
     const store = this.props.store;
-    return <code>{JSON.stringify(store.token)}</code>;
+    return <pre>{JSON.stringify(store.token, null, 2)}</pre>;
   }
 }
 
