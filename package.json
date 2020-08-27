@@ -8,8 +8,9 @@
     "build": "webpack --progress --colors"
   },
   "dependencies": {
-    "@rc-ex/authorize-uri": "^0.5.2",
-    "@rc-ex/core": "^0.5.2",
+    "@rc-ex/authorize-uri": "^0.5.3",
+    "@rc-ex/core": "^0.5.3",
+    "localforage": "^1.9.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-subx": "^0.8.2",

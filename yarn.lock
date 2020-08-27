@@ -23,18 +23,18 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@rc-ex/authorize-uri@^0.5.2":
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/@rc-ex/authorize-uri/-/authorize-uri-0.5.2.tgz#f610cc676b8315e3ee13539fbc7d18d5789a2ae1"
-  integrity sha512-kHcym8KmeVRWFpHt4ZmKRnsjBL7wLf02YfdD/1ck26xFO+ef9En+TkbmPK5Siw/qQlq0omiCKLMC1DAmR+zpZQ==
+"@rc-ex/authorize-uri@^0.5.3":
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/@rc-ex/authorize-uri/-/authorize-uri-0.5.3.tgz#d6d4e100c32f639e8e1334007c7f83b5652407a8"
+  integrity sha512-Pa63WMbiAbkLVhhmnjLL9rvmdbDBfhiudeBTnKgmzDBAAqAFLvXKPcEniiFfSCCdrwnCyfqawZxFhm3DksONCg==
   dependencies:
     "@types/urijs" "^1.19.10"
     urijs "^1.19.2"
 
-"@rc-ex/core@^0.5.2":
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/@rc-ex/core/-/core-0.5.2.tgz#73ad8b175b092bb50262f260b515f50ff19d6ea2"
-  integrity sha512-RO9JMCim1zFjSOwIYbsrEqR/unYvx6vnaINms/wxqdBaUTNeqQM9TXU0GGegVScic53yRj8uuPfnxnpErq0lzA==
+"@rc-ex/core@^0.5.3":
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/@rc-ex/core/-/core-0.5.3.tgz#e52acdb804672a93ba2d86082a23cd02d93f84ff"
+  integrity sha512-IMhrvIfClqMS9iU13eNz4EpFG1eV4hHWWyLDvF/bGwrBuWUvEGNVshQNovt7uyJXCIh4x8rwvP5336CSzhGz3w==
   dependencies:
     "@types/qs" "^6.9.4"
     axios "^0.20.0"
@@ -2775,6 +2775,11 @@ ignore@^5.1.1:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.1.8.tgz#f150a8b50a34289b33e22f5889abd4d8016f0e57"
   integrity sha512-BMpfD7PpiETpBl/A6S498BaIJ6Y/ABT93ETbby2fP00v4EbvPBXWEoaR1UBPKs3iR53pJY7EtZk5KACI57i1Uw==
 
+immediate@~3.0.5:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/immediate/-/immediate-3.0.6.tgz#9db1dbd0faf8de6fbe0f5dd5e56bb606280de69b"
+  integrity sha1-nbHb0Pr43m++D13V5Wu2BigN5ps=
+
 import-fresh@^3.0.0:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/import-fresh/-/import-fresh-3.2.1.tgz#633ff618506e793af5ac91bf48b72677e15cbe66"
@@ -3284,6 +3289,13 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
+lie@3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/lie/-/lie-3.1.1.tgz#9a436b2cc7746ca59de7a41fa469b3efb76bd87e"
+  integrity sha1-mkNrLMd0bKWd56QfpGmz77dr2H4=
+  dependencies:
+    immediate "~3.0.5"
+
 lines-and-columns@^1.1.6:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
@@ -3302,6 +3314,13 @@ loader-utils@^1.0.2, loader-utils@^1.2.3, loader-utils@^1.4.0:
     big.js "^5.2.2"
     emojis-list "^3.0.0"
     json5 "^1.0.1"
+
+localforage@^1.9.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/localforage/-/localforage-1.9.0.tgz#f3e4d32a8300b362b4634cc4e066d9d00d2f09d1"
+  integrity sha512-rR1oyNrKulpe+VM9cYmcFn6tsHuokyVHFaCM3+osEmxaHTbEk8oQu6eGDfS6DQLWi/N67XRmB8ECG37OES368g==
+  dependencies:
+    lie "3.1.1"
 
 locate-path@^3.0.0:
   version "3.0.0"
