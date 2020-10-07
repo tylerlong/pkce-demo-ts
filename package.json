@@ -10,7 +10,9 @@
   "dependencies": {
     "@rc-ex/authorize-uri": "^0.5.9",
     "@rc-ex/core": "^0.5.8",
+    "axios": "^0.20.0",
     "localforage": "^1.9.0",
+    "qs": "^6.9.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-subx": "^0.8.2",

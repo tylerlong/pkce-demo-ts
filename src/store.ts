@@ -3,6 +3,8 @@ import {TokenInfo} from '@rc-ex/core/lib/definitions';
 import RingCentral from '@rc-ex/core';
 import AuthorizeUriExtension from '@rc-ex/authorize-uri';
 import localforage from 'localforage';
+import axios from 'axios';
+import qs from 'qs';
 
 const redirectUri = window.location.origin + window.location.pathname;
 const rc = new RingCentral({
@@ -40,6 +42,15 @@ const store = SubX.proxy<StoreType>({
         redirect_uri: redirectUri,
         code_verifier: (await localforage.getItem('code_verifier')) as string,
       });
+      const r = await axios.post(
+        process.env.RINGCENTRAL_SERVER_URL + '/restapi/oauth/token',
+        qs.stringify({
+          client_id: process.env.RINGCENTRAL_CLIENT_ID,
+          refresh_token: rc.token!.refresh_token!,
+          grant_type: 'refresh_token',
+        })
+      );
+      console.log(r.data);
     }
   },
 });
