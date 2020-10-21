@@ -1,6 +1,7 @@
 import {Component} from 'react-subx';
 import {StoreType, authorizeUri} from './store';
 import React from 'react';
+import {Button} from 'antd';
 
 type PropsStore = {
   store: StoreType;
@@ -30,10 +31,12 @@ class Token extends Component<PropsStore> {
 class Login extends Component {
   render() {
     return (
-      <a href={authorizeUri}>
-        Click to start {'"'}Authorization Code Grant + Proof Key for Code
-        Exchange{'"'}
-      </a>
+      <Button type="primary">
+        <a href={authorizeUri}>
+          Click to start {'"'}Authorization Code Grant + Proof Key for Code
+          Exchange{'"'}
+        </a>
+      </Button>
     );
   }
 }

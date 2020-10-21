@@ -17,9 +17,11 @@ const config: webpack.Configuration = {
       {
         test: /\.tsx?$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'ts-loader',
-        },
+        use: ['ts-loader'],
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
