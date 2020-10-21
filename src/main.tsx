@@ -1,7 +1,7 @@
 import {Component} from 'react-subx';
 import {StoreType, authorizeUri} from './store';
 import React from 'react';
-import {Button} from 'antd';
+import {Button, Input} from 'antd';
 
 type PropsStore = {
   store: StoreType;
@@ -17,14 +17,7 @@ class App extends Component<PropsStore> {
 class Main extends Component<PropsStore> {
   render() {
     const store = this.props.store;
-    return store.token ? <Token store={store} /> : <Login />;
-  }
-}
-
-class Token extends Component<PropsStore> {
-  render() {
-    const store = this.props.store;
-    return <pre>{JSON.stringify(store.token, null, 2)}</pre>;
+    return store.token ? <Form store={store} /> : <Login />;
   }
 }
 
@@ -37,6 +30,19 @@ class Login extends Component {
           Exchange{'"'}
         </a>
       </Button>
+    );
+  }
+}
+
+class Form extends Component<PropsStore> {
+  render() {
+    const store = this.props.store;
+    return (
+      <>
+        <Input placeholder="To number" />
+        <Input.TextArea rows={4} placeholder="Message body" />
+        <input type="file" />
+      </>
     );
   }
 }
