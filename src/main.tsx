@@ -1,7 +1,7 @@
 import {Component} from 'react-subx';
 import {StoreType, authorizeUri} from './store';
 import React from 'react';
-import {Button, Input} from 'antd';
+import {Button, Divider, Input} from 'antd';
 
 type PropsStore = {
   store: StoreType;
@@ -39,9 +39,20 @@ class Form extends Component<PropsStore> {
     const store = this.props.store;
     return (
       <>
-        <Input placeholder="To number" />
-        <Input.TextArea rows={4} placeholder="Message body" />
-        <input type="file" />
+        <h1>Send MMS</h1>
+        <Divider />
+        <Input
+          placeholder="To number"
+          onChange={e => this.setState({toNumber: e.target.value})}
+        />
+        <Input.TextArea
+          rows={4}
+          placeholder="Message body"
+          onChange={e => this.setState({messageBody: e.target.value})}
+        />
+        <input type="file" id="imageFile" accept="image/png, image/jpeg" />
+        <Divider />
+        <Button onClick={e => store.sendMms(this.state)}>Send MMS</Button>
       </>
     );
   }
