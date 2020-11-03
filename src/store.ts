@@ -5,6 +5,8 @@ import AuthorizeUriExtension from '@rc-ex/authorize-uri';
 import localforage from 'localforage';
 import {message} from 'antd';
 
+console.log(`Client ID is ${process.env.RINGCENTRAL_CLIENT_ID}`);
+
 const redirectUri = window.location.origin + window.location.pathname;
 const rc = new RingCentral({
   server: process.env.RINGCENTRAL_SERVER_URL,
