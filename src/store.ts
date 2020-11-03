@@ -42,6 +42,7 @@ const store = SubX.proxy<StoreType>({
         redirect_uri: redirectUri,
         code_verifier: (await localforage.getItem('code_verifier')) as string,
       });
+      console.log(JSON.stringify(this.token, null, 2));
     }
   },
   async sendMms(state: {toNumber: string; messageBody: string}) {
