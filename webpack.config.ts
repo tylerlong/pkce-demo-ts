@@ -35,14 +35,14 @@ const config: webpack.Configuration = {
     }),
     new webpack.ProvidePlugin({
       process: require.resolve('process/browser.js'),
+      Buffer: ['buffer', 'Buffer'],
     }),
   ],
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
     fallback: {
-      crypto: require.resolve('crypto-browserify'),
-      stream: require.resolve('stream-browserify'),
-      vm: false,
+      crypto: false,
+      buffer: require.resolve('buffer'),
     },
   },
 };
