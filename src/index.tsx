@@ -1,14 +1,15 @@
 import './index.css';
 
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import store from './store';
 import App from './main';
 
 const container = document.createElement('div');
 document.body.appendChild(container);
-ReactDOM.render(<App store={store} />, container);
+const root = createRoot(container);
+root.render(<App />);
 
 (async () => {
   await store.init();

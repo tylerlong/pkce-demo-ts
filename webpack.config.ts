@@ -4,14 +4,16 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import webpack from 'webpack';
 import path from 'path';
 import dotenv from 'dotenv-override-true';
-import {DefinePlugin} from 'webpack';
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 const config: webpack.Configuration = {
   mode: 'development',
   devtool: 'source-map',
   entry: './src/index.tsx',
   output: {
-    path: path.resolve(__dirname, 'docs'),
+    path: path.resolve(process.cwd(), 'docs'),
   },
   module: {
     rules: [
@@ -30,11 +32,11 @@ const config: webpack.Configuration = {
     new HtmlWebpackPlugin({
       title: 'RingCentral PKCE demo',
     }),
-    new DefinePlugin({
+    new webpack.DefinePlugin({
       'process.env': JSON.stringify(dotenv.config().parsed),
     }),
     new webpack.ProvidePlugin({
-      process: 'process/browser',
+      process: require.resolve('process/browser.js'),
     }),
   ],
   resolve: {
@@ -43,8 +45,9 @@ const config: webpack.Configuration = {
       crypto: require.resolve('crypto-browserify'),
       buffer: require.resolve('buffer'),
       stream: require.resolve('stream-browserify'),
+      vm: false,
     },
   },
 };
 
-export default [config];
+export default config;

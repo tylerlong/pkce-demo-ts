@@ -1,5 +1,5 @@
-import SubX from 'subx';
-import {TokenInfo} from '@rc-ex/core/lib/definitions';
+import { manage } from 'manate';
+import TokenInfo from '@rc-ex/core/lib/definitions/TokenInfo';
 import RingCentral from '@rc-ex/core';
 import AuthorizeUriExtension from '@rc-ex/authorize-uri';
 import localforage from 'localforage';
@@ -17,16 +17,7 @@ const urlSearchParams = new URLSearchParams(
 );
 const code = urlSearchParams.get('code');
 export let authorizeUri = '';
-if (code === null) {
-  const authorizeUriExtension = new AuthorizeUriExtension();
-  rc.installExtension(authorizeUriExtension);
-  authorizeUri = authorizeUriExtension.buildUri({
-    redirect_uri: redirectUri,
-    code_challenge_method: 'S256',
-  });
-  const codeVerifier = authorizeUriExtension.codeVerifier;
-  localforage.setItem('code_verifier', codeVerifier);
-}
+
 
 export type StoreType = {
   ready: boolean;
@@ -35,10 +26,19 @@ export type StoreType = {
   sendMms: Function;
 };
 
-const store = SubX.proxy<StoreType>({
+const store = manage<StoreType>({
   ready: false,
   async init() {
-    if (code !== null) {
+    if (code === null) {
+      const authorizeUriExtension = new AuthorizeUriExtension();
+      rc.installExtension(authorizeUriExtension);
+      authorizeUri = await authorizeUriExtension.buildUri({
+        redirect_uri: redirectUri,
+        code_challenge_method: 'S256',
+      });
+      const codeVerifier = authorizeUriExtension.codeVerifier;
+      localforage.setItem('code_verifier', codeVerifier);
+    } else {
       this.token = await rc.authorize({
         code,
         redirect_uri: redirectUri,
