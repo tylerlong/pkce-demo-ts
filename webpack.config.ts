@@ -34,7 +34,6 @@ const config: webpack.Configuration = {
       'process.env': JSON.stringify(dotenv.config().parsed),
     }),
     new webpack.ProvidePlugin({
-      process: require.resolve('process/browser.js'),
       Buffer: ['buffer', 'Buffer'],
     }),
   ],
