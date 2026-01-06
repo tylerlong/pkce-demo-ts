@@ -1,5 +1,3 @@
-/* eslint-disable node/no-unpublished-require */
-/* eslint-disable node/no-unpublished-import */
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import webpack from 'webpack';
 import path from 'path';
@@ -37,14 +35,12 @@ const config: webpack.Configuration = {
     }),
     new webpack.ProvidePlugin({
       process: require.resolve('process/browser.js'),
-      Buffer: ['buffer', 'Buffer'],
     }),
   ],
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
     fallback: {
       crypto: require.resolve('crypto-browserify'),
-      buffer: require.resolve('buffer'),
       stream: require.resolve('stream-browserify'),
       vm: false,
     },
