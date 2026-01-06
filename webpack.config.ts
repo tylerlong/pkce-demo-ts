@@ -37,6 +37,7 @@ const config: webpack.Configuration = {
     }),
     new webpack.ProvidePlugin({
       process: require.resolve('process/browser.js'),
+      Buffer: ['buffer', 'Buffer'],
     }),
   ],
   resolve: {

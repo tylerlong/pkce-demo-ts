@@ -23,7 +23,7 @@ const Login = auto(() => {
 });
 
 const Form = auto(() => {
-  const [number, setNumber] = useState('');
+  const [toNumber, setToNumber] = useState('');
   const [messageBody, setMessageBody] = useState('');
 
   return (
@@ -32,7 +32,7 @@ const Form = auto(() => {
         <Divider />
         <Input
           placeholder="To number"
-          onChange={e => setNumber(e.target.value)}
+          onChange={e => setToNumber(e.target.value)}
         />
         <Input.TextArea
           rows={4}
@@ -41,7 +41,7 @@ const Form = auto(() => {
         />
         <input type="file" id="imageFile" accept="image/png, image/jpeg" />
         <Divider />
-        <Button onClick={e => store.sendMms({number, messageBody})}>Send MMS</Button>
+        <Button onClick={e => store.sendMms({toNumber, messageBody})}>Send MMS</Button>
       </>
     );
 });
