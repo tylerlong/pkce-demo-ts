@@ -33,15 +33,11 @@ const config: webpack.Configuration = {
     new webpack.DefinePlugin({
       'process.env': JSON.stringify(dotenv.config().parsed),
     }),
-    new webpack.ProvidePlugin({
-      Buffer: ['buffer', 'Buffer'],
-    }),
   ],
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
     fallback: {
-      crypto: false,
-      buffer: require.resolve('buffer'),
+      // no more polyfills
     },
   },
 };
