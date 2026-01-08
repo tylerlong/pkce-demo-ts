@@ -579,22 +579,22 @@
     "@rc-component/util" "^1.4.0"
     clsx "^2.1.1"
 
-"@rc-ex/authorize-uri@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@rc-ex/authorize-uri/-/authorize-uri-2.0.1.tgz#c6a168dbd8d163414a061d69fb5bc2db563d1003"
-  integrity sha512-FV8/RAhgCizdsJmpYwI7Ps0SntwF4Mn5ko09i+pcf/YfABftIdA43IeetMMvyfq8h5qmM6QYO/JBQm2pf1ibuQ==
+"@rc-ex/authorize-uri@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@rc-ex/authorize-uri/-/authorize-uri-2.0.2.tgz#f4bdb7c6c423d349034badc456b3326f92a2380e"
+  integrity sha512-zCVLN2+T8jw+A7GKyV3lVt9/bWl6sItfISeQVq1PU+KS6Tj76SeqT+2j7VYVDDMLseWNDEj0S+wCtp2f4sEFng==
   dependencies:
-    "@types/urijs" "^1.19.25"
+    "@types/urijs" "^1.19.26"
     urijs "^1.19.11"
 
-"@rc-ex/core@^1.7.2":
-  version "1.7.2"
-  resolved "https://registry.yarnpkg.com/@rc-ex/core/-/core-1.7.2.tgz#72ffc44524bf3d940db40b59dac59950615d9f31"
-  integrity sha512-nlDtFGlyZavN1U7Vm03iedf7MdJzAn9ru7GTG9TOBHmkVhERB9Q0uYTeUd8bcyvu02p58qZxNdHYfSqibmJuBg==
+"@rc-ex/core@^1.7.4":
+  version "1.7.4"
+  resolved "https://registry.yarnpkg.com/@rc-ex/core/-/core-1.7.4.tgz#542408e8d9b0f14e8910a3900203ae418d352dce"
+  integrity sha512-EvzEJZZuxXPsDQQhrXIaGUh3RqFYqr9XISYXwQ2/TGtTdAcKQNBBaOaZjP+NS1J+5TmkNS9NXXrF9s1r7S9IGg==
   dependencies:
     "@types/qs" "^6.14.0"
-    axios "^1.12.2"
-    qs "^6.14.0"
+    axios "^1.13.2"
+    qs "^6.14.1"
 
 "@tsconfig/node10@^1.0.7":
   version "1.0.12"
@@ -830,7 +830,7 @@
   dependencies:
     "@types/node" "*"
 
-"@types/urijs@^1.19.25":
+"@types/urijs@^1.19.26":
   version "1.19.26"
   resolved "https://registry.yarnpkg.com/@types/urijs/-/urijs-1.19.26.tgz#500fc9912e0ba01d635480970bdc9ba0f45d7bc6"
   integrity sha512-wkXrVzX5yoqLnndOwFsieJA7oKM8cNkOKJtf/3vVGSUFkWDKZvFHpIl9Pvqb/T9UsawBBFMTTD8xu7sK5MWuvg==
@@ -1132,7 +1132,7 @@ asynckit@^0.4.0:
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
   integrity sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==
 
-axios@^1.12.2:
+axios@^1.13.2:
   version "1.13.2"
   resolved "https://registry.yarnpkg.com/axios/-/axios-1.13.2.tgz#9ada120b7b5ab24509553ec3e40123521117f687"
   integrity sha512-VPk9ebNqPcy5lRGuSlKx752IlDatOjT9paPlm8A7yOuW2Fbvp4X3JznJtT4f0GzGLLiWE9W8onz51SqLYwzGaA==
@@ -2611,7 +2611,7 @@ proxy-from-env@^1.1.0:
   resolved "https://registry.yarnpkg.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
   integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
 
-qs@^6.14.0, qs@~6.14.0:
+qs@^6.14.1, qs@~6.14.0:
   version "6.14.1"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.14.1.tgz#a41d85b9d3902f31d27861790506294881871159"
   integrity sha512-4EK3+xJl8Ts67nLYNwqw/dsFVnCf+qR7RgXSK9jEEm9unao3njwMDdmsdvoKBKHzxd7tCYz5e5M+SnMjdtXGQQ==

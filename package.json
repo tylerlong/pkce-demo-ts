@@ -5,8 +5,8 @@
     "build": "webpack --progress"
   },
   "dependencies": {
-    "@rc-ex/authorize-uri": "^2.0.1",
-    "@rc-ex/core": "^1.7.2",
+    "@rc-ex/authorize-uri": "^2.0.2",
+    "@rc-ex/core": "^1.7.4",
     "antd": "^6.1.4",
     "localforage": "^1.10.0",
     "manate": "^2.0.3",
